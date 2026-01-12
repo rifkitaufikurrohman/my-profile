@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --color-gold: #B59462; 
+}
+
+@layer base {
+  html {
+    font-family: "Poppins", sans-serif;
+  }
+}
+
+@layer utilities {
+  .bg-dark-primary {
+    background-color: #181818;
+  }
+
+  .bg-navbar {
+    background-color: #1F1E1E;
+  }
+
+  .font-playfair {
+    font-family: "Playfair Display", serif;
+  }
+}
