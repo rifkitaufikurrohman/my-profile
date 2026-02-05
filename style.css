@@ -5,8 +5,10 @@
 }
 
 @layer base {
-  html {
+  html, body {
     font-family: "Poppins", sans-serif;
+    scroll-behavior: smooth;
+    overscroll-behavior-y: none;
   }
 }
 
@@ -22,4 +24,9 @@
   .font-playfair {
     font-family: "Playfair Display", serif;
   }
+
+  .animate-pulse {
+    animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    -webkit-animation: pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
 }
