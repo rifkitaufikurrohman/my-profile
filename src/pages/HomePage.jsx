@@ -279,7 +279,7 @@ const HomePage = () => {
 
             <div className="flex gap-4 sm:gap-6 justify-center flex-wrap pt-6 sm:pt-8">
               {/* Social Links */}
-              <a href="" className="group size-14 sm:size-20 p-2 flex items-center justify-center border border-gold/20 rounded-full hover:border-gold/60 hover:bg-gold/10 transition-all md:hover:scale-110 active:scale-95 active:bg-gold/20">
+              <a href="https://www.linkedin.com/in/rifkitaufik23/" className="group size-14 sm:size-20 p-2 flex items-center justify-center border border-gold/20 rounded-full hover:border-gold/60 hover:bg-gold/10 transition-all md:hover:scale-110 active:scale-95 active:bg-gold/20">
                 <img 
                   src={logoLinkedin} alt="" className="size-8 sm:size-10 object-contain sm:brightness-1000 md:group-hover:brightness-100 transition ease-in-out duration-200"
                 />
