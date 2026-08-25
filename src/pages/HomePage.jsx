@@ -7,6 +7,7 @@ import logoLinkedin from "../assets/logo-linkedin.svg";
 import logoGithub from "../assets/logo-github-white.svg";
 import logoEmail from "../assets/logo-email.svg";
 import { projects } from "../data/projects";
+import CardProject from "../components/CardProject";
 
 const HomePage = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -125,16 +126,7 @@ const HomePage = () => {
                 Software Engineering Student
               </p>
             </div>
-
-            {/* CTA Buttons */}
-            {/* <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center pt-4 sm:pt-6 px-4">
-              <button className="px-6 sm:px-8 py-2.5 sm:py-3 bg-gold text-dark-primary font-semibold rounded-full hover:bg-gold/90 transition-all hover:scale-105 text-sm sm:text-base">
-                View Projects
-              </button>
-              <button className="px-6 sm:px-8 py-2.5 sm:py-3 border-2 border-gold text-gold font-semibold rounded-full hover:bg-gold/10 transition-all hover:scale-105 text-sm sm:text-base">
-                Contact Me
-              </button>
-            </div> */}
+           
           </div>
         </section>
 
@@ -187,7 +179,7 @@ const HomePage = () => {
                 <div className="bg-navbar/50 backdrop-blur-sm p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-gold/20 hover:border-gold/40 transition-all duration-300">
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-4 sm:mb-6">Tech Stack</h4>
                   <div className="grid grid-cols-2 gap-3 sm:gap-4">
-                    {['Javascript', 'HTML/CSS', 'React JS', 'TailwindCSS', 'Node JS', 'Git'].map((skill) => (
+                    {['Javascript', 'TypeScript', 'HTML/CSS', 'React JS', 'TailwindCSS', 'MySQL', 'Git'].map((skill) => (
                       <div key={skill} className="bg-dark-primary/50 px-3 sm:px-4 py-2 sm:py-3 rounded-lg border border-gold/10 hover:border-gold/30 transition-all text-center">
                         <span className="text-gold font-medium text-sm sm:text-base">{skill}</span>
                       </div>
@@ -221,35 +213,14 @@ const HomePage = () => {
             {/* Projects (FLEX) */}
             <div className="flex flex-wrap justify-center p-4 gap-y-6 sm:gap-10 sm:p-0 lg:gap-17 pb-8">
               {projects.map((item) => (
-                <div key={item.id} className="group w-full max-w-[320px] bg-navbar/50 backdrop-blur-sm rounded-xl sm:rounded-2xl  overflow-hidden border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:scale-102"
-                >
-                  <div className="aspect-video overflow-hidden bg-black/20">
-                    <img
-                      src={item.image}
-                      alt={item.title}
-                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-100"
-                    />
-                  </div>
-
-                  <div className="p-4 sm:p-6 space-y-2 sm:space-y-3">
-                    <h4 className="text-lg sm:text-xl font-semibold text-white group-hover:text-gold transition-colors">
-                      {item.title}
-                    </h4>
-                    <p className="text-gray-400 text-xs sm:text-sm">
-                      {item.description}
-                    </p>
-                    <div className="flex gap-2 flex-wrap">
-                      {item.techStack.map((tech) => (
-                        <span
-                          key={tech}
-                          className="text-xs px-2.5 sm:px-3 py-1 bg-gold/10 text-gold rounded-full"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                </div>
+                <CardProject
+                  key={item.id}
+                  id={item.id}
+                  title={item.title}
+                  description={item.description}
+                  image={item.image}
+                  techStack={item.techStack}
+                />
               ))}
             </div>
 
