@@ -1,8 +1,19 @@
 import React from 'react'
 
-const CardProject = ({ id, image, title, description, techStack }) => {
+const CardProject = ({ id, image, title, description, techStack, linkDemo }) => {
+  const isLinkValid = linkDemo && linkDemo !== '#';
+  const CardWrapper = isLinkValid ? 'a' : 'div';
+  const wrapperProps = isLinkValid 
+    ? { href: linkDemo, target: '_blank', rel: 'noopener noreferrer' } 
+    : {};
+
   return (
-    <div key={id} className="group w-full max-w-[320px] bg-navbar/50 backdrop-blur-sm rounded-xl sm:rounded-2xl  overflow-hidden border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:scale-102"
+    <CardWrapper
+      key={id}
+      {...wrapperProps}
+      className={`group w-full max-w-[320px] bg-navbar/50 backdrop-blur-sm rounded-xl sm:rounded-2xl overflow-hidden border border-gold/20 hover:border-gold/40 transition-all duration-300 hover:scale-102 block ${
+        isLinkValid ? 'cursor-pointer' : ''
+      }`}
     >
       <div className="aspect-video overflow-hidden bg-black/20">
         <img
@@ -30,7 +41,7 @@ const CardProject = ({ id, image, title, description, techStack }) => {
           ))}
         </div>
       </div>
-    </div>
+    </CardWrapper>
   )
 }
 

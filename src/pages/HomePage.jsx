@@ -220,6 +220,7 @@ const HomePage = () => {
                   description={item.description}
                   image={item.image}
                   techStack={item.techStack}
+                  linkDemo={item.LinkDemo}
                 />
               ))}
             </div>

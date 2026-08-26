@@ -12,7 +12,8 @@ export const projects = [
       'ReactJS',
       'TailwindCSS',
       'Supabase'
-    ]
+    ],
+    LinkDemo: "#"
   },
    {
     id: 2,
@@ -25,7 +26,8 @@ export const projects = [
       'Typescript',
       'TailwindCSS',
       'PostgreSQL'
-    ]
+    ],
+    LinkDemo: "https://fintrackzz.vercel.app/"
   },
   
 ];
