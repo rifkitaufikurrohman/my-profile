@@ -158,7 +158,7 @@ const HomePage = () => {
                 <div className="bg-navbar/50 backdrop-blur-sm p-5 sm:p-6 md:p-8 rounded-xl sm:rounded-2xl border border-gold/20 hover:border-gold/40 transition-all duration-300">
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-3 sm:mb-4">What I Do</h4>
                   <ul className="space-y-2 sm:space-y-3 text-sm sm:text-base text-gray-300">
-                    <li className="flex items-start gap-2 sm:gap-3">
+                    <li className="flex items-start gap-2 sm:gap-3 ">
                       <span className="text-gold mt-1">▹</span>
                       <span>Building responsive web applications</span>
                     </li>
